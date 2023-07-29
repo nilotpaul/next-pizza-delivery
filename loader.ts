@@ -10,9 +10,7 @@ type loaderProps = {
 
 const loader: FC<loaderProps> = ({ src, width, quality }) => {
   const params = ["f_auto", "c_limit", `w_${width}`, `q_${quality || "auto"}`];
-  return `https://res.cloudinary.com/dtxry2kma/image/upload/${params.join(
-    ","
-  )}${src}`;
+  return `${process.env.CLOUDINARY_URL_STRING}/${params.join(",")}${src}`;
 };
 
 export default loader;
