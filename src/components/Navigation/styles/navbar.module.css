@@ -1,0 +1,137 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* background-color: rgb(39, 39, 39); */
+  background-color: var(--bg-color);
+  /* box-shadow: 0px 4px 19px hsla(0, 0%, 33%, 0.1); */
+  z-index: 9999;
+}
+
+.navbar {
+  display: flex;
+  height: var(--header-height);
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.brand h1 {
+  display: inline-flex;
+  column-gap: 2px;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--h2-font-size);
+}
+
+.pizza {
+  color: var(--red-color);
+}
+
+.rio {
+  color: var(--yellow-color);
+}
+
+.nav__right > span {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1023px) {
+  .nav__menu {
+    position: fixed;
+    left: 0;
+    top: calc(var(--header-height) + 1rem);
+    padding: 2rem 0 1.8rem 0;
+    background-color: rgb(14, 14, 14);
+    width: 100%;
+    opacity: 1;
+    transition: top 0.6s, opacity 0.6s;
+    box-shadow: 0px 1px 14px hsla(0, 0%, 69%, 0.1);
+  }
+
+  .hidden {
+    top: -100%;
+    opacity: 0;
+    transition: top 0.6s, opacity 0.6s;
+  }
+
+  .nav__menu .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2.7rem;
+  }
+}
+
+.nav__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.btn:hover {
+  scale: 0.95;
+  transition: scale 0.3s;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--red-color);
+  scale: 1;
+  color: var(--bg-color);
+  letter-spacing: 0.5px;
+  padding: 0.7em 0.85em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-size: 1em;
+  font-weight: 600;
+  transition: scale 0.3s;
+}
+
+#menu,
+#close,
+#sun,
+#moon {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mode {
+  border-radius: 50%;
+  padding: 0.2rem;
+  transition: all 0.4s;
+}
+
+#active_link {
+  color: var(--yellow-color);
+}
+
+.nav__list li:not(:last-child) > a {
+  color: #f5f5f5;
+  font-size: var(--normal-font-size);
+}
+
+.nav__list li:not(:last-child) > a:hover {
+  color: var(--yellow-color);
+}
+
+@media only screen and (min-width: 1023px) {
+  .nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.35rem;
+  }
+
+  .nav__list li:last-child {
+    display: none;
+  }
+
+  .nav__right .menu {
+    display: none;
+  }
+}

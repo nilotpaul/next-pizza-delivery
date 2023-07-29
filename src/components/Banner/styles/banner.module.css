@@ -1,0 +1,415 @@
+/* banner style */
+.banner {
+  border-bottom: 1px solid #686868;
+  padding-bottom: 4rem;
+}
+
+/* img style */
+.right {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.img_container {
+  display: flex;
+  align-items: flex-end;
+  width: 450px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.banner_img {
+  margin: 0 auto;
+}
+
+.onion,
+.rasher,
+.jalapeno {
+  position: absolute;
+  width: fit-content;
+}
+
+.rasher {
+  top: 6rem;
+  left: -1rem;
+}
+
+.onion {
+  top: 3.33rem;
+  left: 6rem;
+}
+
+.jalapeno {
+  right: 0;
+  top: 5.5rem;
+}
+
+/* text style */
+.left #first {
+  color: var(--red-color);
+  font-size: var(--h2-font-size);
+}
+
+.left #second,
+#third {
+  font-size: var(--big-font-size);
+  font-weight: 600;
+}
+
+.left #second {
+  color: var(--red-color);
+}
+
+.left #third {
+  color: var(--yellow-color);
+}
+
+.left p {
+  line-height: 1.6;
+  font-size: var(--h3-font-size);
+}
+
+/* button */
+.down {
+  margin-top: 1.25rem;
+}
+
+.down #price_1 {
+  font-size: var(--h2-font-size);
+  color: var(--red-color);
+  position: relative;
+}
+
+.down #price_2 {
+  color: #fff;
+  font-size: var(--small-font-size);
+  position: absolute;
+  text-decoration: line-through;
+  width: max-content;
+  top: -0.25rem;
+  left: 4.35rem;
+}
+
+.down a {
+  color: var(--bg-color);
+  background-color: var(--red-color);
+  padding: 0.66rem 1.45rem;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  font-size: var(--normal-font-size);
+  transition: transform 0.4s;
+}
+
+/* for very small devices */
+@media only screen and (max-width: 576px) {
+  .left {
+    text-align: center;
+  }
+
+  .img_container {
+    height: 55vh;
+  }
+
+  .onion {
+    top: 2rem;
+    width: 220px;
+  }
+
+  .rasher {
+    top: 5rem;
+    left: -1.85rem;
+    width: 220px;
+  }
+
+  .jalapeno {
+    top: 3.5rem;
+    width: 220px;
+  }
+
+  .down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.55rem;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* for small to medium devices */
+@media only screen and (max-width: 768px) and (min-width: 576px) {
+  .left {
+    text-align: center;
+  }
+
+  .onion {
+    top: 2rem;
+    width: 220px;
+  }
+
+  .rasher {
+    top: 5rem;
+    left: -1.85rem;
+    width: 220px;
+  }
+
+  .jalapeno {
+    top: 3.5rem;
+    width: 220px;
+  }
+
+  .down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.55rem;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .img_container {
+    height: 430px;
+    width: 550px;
+    margin-top: 2rem;
+  }
+
+  .onion {
+    width: 240px;
+    left: 8.6rem;
+    top: -1rem;
+  }
+
+  .rasher {
+    width: 250px;
+    top: 3rem;
+  }
+
+  .jalapeno {
+    width: 250px;
+    top: 1rem;
+  }
+}
+
+/* for large devices */
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .img_container {
+    height: 365px;
+  }
+
+  .down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.2rem;
+  }
+
+  .rasher {
+    top: 1.5rem;
+    z-index: 1;
+  }
+
+  .onion {
+    top: -1.8rem;
+  }
+
+  .jalapeno {
+    top: 0rem;
+    right: -1.5rem;
+  }
+}
+
+/* for large devices */
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
+  .banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .img_container {
+    height: 380px;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .down #price_2 {
+    left: 5.25rem;
+  }
+
+  .jalapeno {
+    right: -1.2rem;
+    top: 1rem;
+  }
+
+  .onion {
+    top: 0;
+    left: 6.45rem;
+  }
+
+  .rasher {
+    top: 4rem;
+    left: -2rem;
+  }
+}
+
+/* for very large devices */
+@media only screen and (min-width: 1200px) {
+  .banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: flex-start;
+    place-content: center;
+    gap: 1.5rem;
+  }
+
+  .img_container {
+    height: 380px;
+  }
+
+  .rasher {
+    top: 1.44rem;
+    left: -3rem;
+    width: 235px;
+  }
+
+  .onion {
+    width: 235px;
+    top: -2rem;
+  }
+
+  .jalapeno {
+    width: 235px;
+    right: -2rem;
+    top: -1rem;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  .down #price_2 {
+    left: 5.3rem;
+  }
+}
+
+/* button hover effect on large devices */
+@media only screen and (min-width: 1023px) {
+  .down a:hover {
+    transform: translateX(6px);
+    transition: transform 0.4s;
+  }
+}
+
+/* some extra queries */
+@media only screen and (min-width: 769px) and (max-width: 1008px) {
+  .img_container {
+    width: 340px;
+    height: 340px;
+  }
+
+  .rasher,
+  .onion,
+  .jalapeno {
+    width: 175px;
+  }
+
+  .rasher {
+    top: 4.4rem;
+    left: -2rem;
+    z-index: 1;
+  }
+
+  .onion {
+    top: 0.75rem;
+    left: 4.5rem;
+  }
+
+  .jalapeno {
+    top: 2.2rem;
+    right: -1.66rem;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .img_container {
+    width: 310px;
+    height: 310px;
+  }
+
+  .rasher,
+  .jalapeno,
+  .onion {
+    width: 190px;
+  }
+
+  .rasher {
+    top: 3.2rem;
+    z-index: 1;
+  }
+
+  .onion {
+    left: 3.2rem;
+    top: 0.5rem;
+  }
+
+  .jalapeno {
+    right: -2rem;
+    top: 2rem;
+  }
+}

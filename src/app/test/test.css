@@ -1,0 +1,40 @@
+.test {
+  padding-top: 8rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.img_container {
+  height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  width: 450px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.banner {
+  margin: 0 auto;
+}
+
+.onion,
+.rasher,
+.jalapeno {
+  position: absolute;
+  width: fit-content;
+}
+
+.rasher {
+  top: 6rem;
+  left: -1rem;
+}
+
+.onion {
+  top: 3.33rem;
+  left: 6rem;
+}
+
+.jalapeno {
+  right: 0;
+  top: 5.5rem;
+}

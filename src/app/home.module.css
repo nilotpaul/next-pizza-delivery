@@ -1,0 +1,9 @@
+.home {
+  padding-top: 8rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    padding-top: 6rem;
+  }
+}
