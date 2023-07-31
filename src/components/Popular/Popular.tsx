@@ -1,8 +1,9 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import styles from "./styles/popular.module.css";
 import { Pacifico } from "next/font/google";
+
+import styles from "./styles/popular.module.css";
 
 const pacifico = Pacifico({
   style: ["normal"],
@@ -14,9 +15,8 @@ const Popular: FC = () => {
   return (
     <div className={styles.popular}>
       <span className={pacifico.className} id={styles.specials}>
-        Specials For You
+        What are you craving for?
       </span>
-      <h1>Popular Dishes</h1>
       <div className={styles.categories}>
         <ul className={styles.category}>
           <li className={styles.pizza}>
@@ -26,7 +26,7 @@ const Popular: FC = () => {
               height={90}
               width={90}
             />
-            <span>PIZZA</span>
+            <span>Pizza</span>
           </li>
           <li className={styles.combo}>
             <Image

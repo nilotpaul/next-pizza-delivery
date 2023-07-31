@@ -8,6 +8,7 @@ import Sidebar from "./Sidebar";
 const Navigation: FC = () => {
   const [openNav, setOpenNav] = useState<boolean>(false);
   const [isDark, setIsDark] = useState<boolean>(false);
+  const [openSideBar, setopenSideBar] = useState<boolean>(false);
   const closeRef = useRef<HTMLSpanElement | null>(null);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const pathname = usePathname();
@@ -34,7 +35,11 @@ const Navigation: FC = () => {
         menuRef={menuRef}
         pathname={pathname}
       />
-      <Sidebar pathname={pathname} />
+      <Sidebar
+        pathname={pathname}
+        openSideBar={openSideBar}
+        setOpenSideBar={setopenSideBar}
+      />
     </>
   );
 };

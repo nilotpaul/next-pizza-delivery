@@ -1,10 +1,16 @@
 .sidebar {
   position: sticky;
   z-index: 9999;
-  background-color: #f0f0f0;
 }
 
-@media screen and (max-width: 992px) {
+.sidebar__link span {
+  background: linear-gradient(to right, var(--red-color), var(--bg-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 1023px) {
   .sidebar {
     position: fixed;
     bottom: 0;
@@ -12,7 +18,8 @@
     width: 100%;
     margin: 0 auto;
     border-radius: 1.25rem 1.25rem 0 0;
-    box-shadow: 0px 1px 16px #a9a9a9;
+    background-color: #f0f0f0;
+    box-shadow: 0.5px 0px 7px #a9a9a9;
   }
 
   .sidebar__menu {
@@ -30,18 +37,78 @@
     row-gap: 0.3rem;
   }
 
-  .sidebar__link span {
-    background: linear-gradient(to right, var(--red-color), var(--bg-color));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  #back {
+    display: none;
   }
 }
 
-@media screen and (width >= 576px) and (width <= 992px) {
+@media only screen and (min-width: 576px) and (max-width: 1023px) {
   .sidebar {
+    background-color: #f0f0f0;
     width: 70%;
     left: 0;
     right: 0;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .sidebar {
+    position: fixed;
+    width: 80px;
+    height: 60vh;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0 1.25rem 1.25rem 0;
+    margin: auto 0;
+  }
+
+  .sidebar__menu {
+    background-color: #f0f0f0;
+    box-shadow: 0.5px 0px 7px #a9a9a9;
+    border-radius: 0 1.25rem 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    height: 60vh;
+    width: 80px;
+    padding: 2rem 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: left 0.6s, opacity 0.6s;
+  }
+
+  .sidebar__items > .sidebar__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    color: #000;
+  }
+
+  #back {
+    position: absolute;
+    background-color: var(--red-color);
+    color: var(--bg-color);
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .hidden {
+    left: -1000%;
+    opacity: 0;
+    transition: left 0.6s, opacity 0.6;
   }
 }
