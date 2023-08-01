@@ -5,40 +5,39 @@ import "./test.css";
 
 const page: FC = () => {
   return (
-    <div className="container test">
-      <div className="img_container">
-        <Image
-          className="banner"
-          src="/next-pizza-delivery-app/banner.png"
-          alt="banner-img"
-          width={500}
-          height={500}
-          priority
-        />
-        <Image
-          className="jalapeno"
-          src="/next-pizza-delivery-app/jalapeno"
-          alt="jalapeno"
-          height={260}
-          width={260}
-          quality={100}
-        />
-        <Image
-          className="rasher"
-          src="/next-pizza-delivery-app/grilled-chicken-rasher"
-          alt="grillied-chicken-rasher"
-          height={260}
-          width={260}
-          quality={100}
-        />
-        <Image
-          className="onion"
-          src="/next-pizza-delivery-app/onion"
-          alt="onion"
-          height={260}
-          width={260}
-          quality={100}
-        />
+    <div className="carousel">
+      <div className="carousel__track">
+        <div className="slide">
+          <Image src="/next-pizza-delivery-app/c4_wrdw3k" alt="story 1" fill />
+        </div>
+        <div className="slide">
+          <Image src="/next-pizza-delivery-app/c2_jhlbvz" alt="Story 2" fill />
+        </div>
+        <div className="slide">
+          <Image src="/next-pizza-delivery-app/c3_y1erpl" alt="Story 3" fill />
+        </div>
+        <div className="slide">
+          <Image src="/next-pizza-delivery-app/c5_hacrjq" alt="Story 4" fill />
+        </div>
+        <div className="slide">
+          <Image src="/next-pizza-delivery-app/c1_fcqqix" alt="Story 5" fill />
+        </div>
+
+        <div className="slide">
+          <Image src="/next-pizza-delivery-app/c4_wrdw3k" alt="story 1" fill />
+        </div>
+        <div className="slide">
+          <Image src="/next-pizza-delivery-app/c2_jhlbvz" alt="Story 2" fill />
+        </div>
+        <div className="slide">
+          <Image src="/next-pizza-delivery-app/c3_y1erpl" alt="Story 3" fill />
+        </div>
+        <div className="slide">
+          <Image src="/next-pizza-delivery-app/c5_hacrjq" alt="Story 4" fill />
+        </div>
+        <div className="slide">
+          <Image src="/next-pizza-delivery-app/c1_fcqqix" alt="Story 5" fill />
+        </div>
       </div>
     </div>
   );

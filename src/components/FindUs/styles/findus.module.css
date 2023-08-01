@@ -1,0 +1,62 @@
+.findus {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.down {
+  margin-top: 2.5rem;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  grid-template-columns: repeat(2, 315px);
+  column-gap: 10rem;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 0.65rem;
+}
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.map > img {
+  border-radius: 0.45rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.findus h3 {
+  color: var(--red-color);
+  font-size: var(--h3-font-size);
+}
+
+.findus p {
+  color: rgb(245, 245, 245);
+  font-size: var(--normal-font-size);
+}
+
+@media only screen and (max-width: 874px) {
+  .address {
+    text-align: center;
+    align-items: center;
+  }
+  .down {
+    grid-template-columns: initial;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 2rem;
+    place-items: start;
+    column-gap: normal;
+    place-content: initial;
+  }
+}

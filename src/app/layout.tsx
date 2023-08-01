@@ -6,6 +6,7 @@ import { Montserrat } from "next/font/google";
 
 import "./globals.css";
 import "remixicon/fonts/remixicon.css";
+import Footer from "@/components/Footer/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <Navigation />
         <main className="container">{children}</main>
+        <Footer />
       </body>
     </html>
   );

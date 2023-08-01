@@ -5,6 +5,7 @@ import WhyUs from "@/components/WhyUs/WhyUs";
 import FollowUs from "@/components/FollowUs/Followus";
 
 import styles from "./home.module.css";
+import Findus from "@/components/FindUs/Findus";
 
 export default function Home() {
   return (
@@ -24,6 +25,9 @@ export default function Home() {
         </div>
         <div className={styles.followus}>
           <FollowUs />
+        </div>
+        <div className={styles.findus}>
+          <Findus />
         </div>
       </div>
     </main>

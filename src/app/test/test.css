@@ -1,40 +1,41 @@
-.test {
+.carousel {
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
   padding-top: 8rem;
-  margin: 0 auto;
   overflow: hidden;
 }
 
-.img_container {
-  height: 60vh;
+.carousel__track {
   display: flex;
-  align-items: flex-end;
-  width: 450px;
-  margin: 0 auto;
+  width: calc(250px * 10);
+  animation: carousel 7s linear infinite;
+}
+
+.slide {
   position: relative;
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
 }
 
-.banner {
-  margin: 0 auto;
+.carousel__track > .slide > img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
-.onion,
-.rasher,
-.jalapeno {
-  position: absolute;
-  width: fit-content;
-}
+@keyframes carousel {
+  from {
+    transform: translateX(0);
+  }
 
-.rasher {
-  top: 6rem;
-  left: -1rem;
-}
-
-.onion {
-  top: 3.33rem;
-  left: 6rem;
-}
-
-.jalapeno {
-  right: 0;
-  top: 5.5rem;
+  to {
+    transform: translateX(calc(-250px * 5));
+  }
 }

@@ -1,3 +1,59 @@
 .followus {
   margin-top: 6rem;
+  text-align: center;
+}
+
+.followus h1 {
+  font-size: var(--h1-font-size);
+}
+
+.followus h3 {
+  margin-top: 0.7rem;
+  font-size: var(--h3-font-size);
+}
+
+.followus h3 > span:first-child {
+  color: var(--red-color);
+}
+
+.followus h3 > span:last-child {
+  color: var(--yellow-color);
+}
+
+.carousel {
+  margin-top: 2rem;
+}
+
+.carousel__track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(280px * 10);
+  animation: carousel 14s linear infinite;
+}
+
+.carousel__items {
+  position: relative;
+  height: 220px;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+}
+
+@keyframes carousel {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-280px * 5));
+  }
+}
+
+.carousel .carousel__items > img {
+  object-fit: cover;
+  object-position: center;
+  padding: 0.625rem;
+  border-radius: 0.9rem;
 }
