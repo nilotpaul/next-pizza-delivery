@@ -16,7 +16,7 @@ const Findus: FC = () => {
           <p>Sunday: 12:00 PM to 9:00 PM</p>
           <h3>Contacts:</h3>
           <p>Phone: (555) 123-4567</p>
-          <p>Email: info@examplepizza.com</p>
+          <p>Email: info@pizzario.com</p>
         </div>
         <div className={styles.map}>
           <Image

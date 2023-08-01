@@ -78,3 +78,7 @@ img {
 .main {
   overflow: hidden;
 }
+
+.footer {
+  background: linear-gradient(180deg, #222, #444);
+}
