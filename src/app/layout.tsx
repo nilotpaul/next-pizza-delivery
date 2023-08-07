@@ -4,7 +4,6 @@ import { Montserrat } from "next/font/google";
 import "@/app/globals.css";
 import "remixicon/fonts/remixicon.css";
 import NextSessionProvider from "@/context/SessionProvider";
-import { revalidatePath } from "next/cache";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
