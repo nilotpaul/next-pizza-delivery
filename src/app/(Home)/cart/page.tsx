@@ -2,7 +2,6 @@ import { FC } from "react";
 import Link from "next/link";
 import { getCart } from "@/lib/db/Cart";
 import Image from "next/image";
-import loader from "../../../../loader";
 import SelectQty from "./SelectQty";
 import Remove from "./Remove";
 
@@ -39,7 +38,6 @@ const CartPage: FC = async () => {
                         alt={items.Item.name}
                         height={160}
                         width={160}
-                        loader={loader}
                         priority
                       />
                     </Link>
