@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./layout.module.css";
 
 export default function AboutLayout({
@@ -8,11 +9,11 @@ export default function AboutLayout({
   return (
     <main>
       <div className={styles.head}>
-        <h1>About us</h1>
+        <h1>About Me</h1>
         <div className={styles.breadcrumb}>
-          <span>Home</span>
+          <Link href="/">Home</Link>
           <i className="ri-arrow-right-double-line" />
-          <span>About Me</span>
+          <Link href="/about">About</Link>
         </div>
       </div>
       {children}

@@ -39,6 +39,20 @@
   align-items: center;
 }
 
+.nav__right i {
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav__right img {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav__right i:hover {
+  color: var(--yellow-color);
+}
+
 @media only screen and (max-width: 1023px) {
   .nav__menu {
     position: fixed;
@@ -70,7 +84,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 2rem;
+  column-gap: 1.5rem;
 }
 
 .btn:hover {

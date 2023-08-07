@@ -113,10 +113,23 @@
   color: var(--yellow-color);
 }
 
-.items h3 {
+.items a h3 {
   font-size: calc(var(--h3-font-size) + 0.15rem);
 }
 
-.items span {
+.items a span {
   font-size: var(--h3-font-size);
+}
+
+@media only screen and (max-width: 600px) {
+  .items button {
+    font-size: calc(var(--h3-font-size) + 0.5rem);
+  }
+  .items a h3 {
+    font-size: calc(var(--h3-font-size) + 0.4rem);
+  }
+
+  .items a span {
+    font-size: calc(var(--h3-font-size) + 0.35rem);
+  }
 }

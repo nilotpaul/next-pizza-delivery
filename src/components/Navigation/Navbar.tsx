@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { FC } from "react";
+import Image from "next/image";
+import { useSession } from "next-auth/react";
 
 import { HiOutlineMenuAlt2, HiSun, HiMoon } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
@@ -25,6 +27,8 @@ const Navbar: FC<ChildProps> = ({
   menuRef,
   pathname,
 }) => {
+  const { data } = useSession();
+
   return (
     <nav className={styles.header}>
       <div className={`container ${styles.navbar}`}>
@@ -94,6 +98,34 @@ const Navbar: FC<ChildProps> = ({
               <HiOutlineMenuAlt2 size={23} id={styles.menu} />
             )}
           </span>
+          <Link href="/cart">
+            <i
+              className="ri-shopping-bag-2-line"
+              style={
+                pathname === "/cart"
+                  ? { color: "var(--yellow-color)", fontSize: "26px" }
+                  : { fontSize: "26px" }
+              }
+            />
+          </Link>
+          {data ? (
+            <Link href="/api/auth/signout">
+              <Image
+                src={data?.user.image as string}
+                alt={data?.user.name as string}
+                height={32}
+                width={32}
+                priority
+              />
+            </Link>
+          ) : (
+            <Link href="/api/auth/signin">
+              <i
+                className="ri-login-circle-line"
+                style={{ fontSize: "26px" }}
+              />
+            </Link>
+          )}
           <span
             className={styles.mode}
             style={

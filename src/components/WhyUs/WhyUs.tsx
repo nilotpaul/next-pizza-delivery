@@ -1,7 +1,6 @@
 import { FC } from "react";
 
 import Image from "next/image";
-import loader from "../../../loader";
 
 import { MdOutlineDeliveryDining } from "react-icons/md";
 import { FaThumbsUp } from "react-icons/fa6";
@@ -15,8 +14,7 @@ const WhyUs: FC = () => {
       <div className={styles.whyus__container}>
         <div className={styles.left}>
           <Image
-            loader={loader}
-            src="/next-pizza-delivery-app/whyus2"
+            src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/whyus2"
             alt="Why Us?"
             fill
           />

@@ -3,7 +3,6 @@ import { menuItems } from "@prisma/client";
 import { prisma } from "@/lib/db/PrismaClient";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Image from "next/image";
-import loader from "../../../../../../loader";
 import Buynow from "./Buynow";
 
 import styles from "./item.module.css";
@@ -48,7 +47,6 @@ const Item: FC<ItemProps> = async ({ params: { item } }) => {
         width={400}
         height={400}
         priority
-        loader={loader}
         quality={100}
       />
       <div className={styles.info}>
@@ -58,8 +56,8 @@ const Item: FC<ItemProps> = async ({ params: { item } }) => {
           nostrum quis illum officia repellat incidunt. Placeat recusandae
           numquam in corporis.
         </p>
-        <Buynow id={id} />
         <span>$ {price}</span>
+        <Buynow id={id} />
       </div>
     </div>
   );

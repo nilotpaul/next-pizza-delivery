@@ -1,7 +1,6 @@
 import { FC } from "react";
 
 import Image from "next/image";
-import loader from "../../../loader";
 
 import styles from "./styles/findus.module.css";
 
@@ -22,8 +21,7 @@ const Findus: FC = () => {
         </div>
         <div className={styles.map}>
           <Image
-            loader={loader}
-            src="/next-pizza-delivery-app/map_izk7md"
+            src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/map_izk7md"
             alt="Find Us Map"
             fill
           />

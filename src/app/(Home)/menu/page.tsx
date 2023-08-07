@@ -1,7 +1,6 @@
 import { FC } from "react";
 
 import Image from "next/image";
-import loader from "../../../../loader";
 import { prisma } from "@/lib/db/PrismaClient";
 import Link from "next/link";
 
@@ -17,11 +16,10 @@ const Menu: FC = async () => {
       <div className={styles.pizza}>
         <div className={styles.img}>
           <Image
-            src="/next-pizza-delivery-app/pizza6_coany1.jpg"
+            src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/pizza6_coany1.jpg"
             alt="Pizza Banner"
             height={480}
             width={480}
-            loader={loader}
             priority
           />
           <Link href="/menu/pizza">Order Now</Link>
@@ -37,7 +35,6 @@ const Menu: FC = async () => {
                       alt={items.name}
                       height={100}
                       width={100}
-                      loader={loader}
                     />
                   </Link>
 

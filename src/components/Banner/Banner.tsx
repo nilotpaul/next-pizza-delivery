@@ -1,7 +1,6 @@
 import { FC } from "react";
 
 import Image from "next/image";
-import loader from "../../../loader";
 import Link from "next/link";
 
 import styles from "./styles/banner.module.css";
@@ -37,36 +36,32 @@ const Banner: FC = () => {
       <div className={styles.right}>
         <div className={styles.img_container}>
           <Image
-            loader={loader}
             className={styles.banner_img}
-            src="/next-pizza-delivery-app/banner.png"
+            src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/banner.png"
             alt="banner-img"
             width={500}
             height={500}
             priority
           />
           <Image
-            loader={loader}
             className={styles.jalapeno}
-            src="/next-pizza-delivery-app/jalapeno"
+            src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/jalapeno"
             alt="jalapeno"
             height={260}
             width={260}
             quality={100}
           />
           <Image
-            loader={loader}
             className={styles.rasher}
-            src="/next-pizza-delivery-app/grilled-chicken-rasher"
+            src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/grilled-chicken-rasher"
             alt="grillied-chicken-rasher"
             height={260}
             width={260}
             quality={100}
           />
           <Image
-            loader={loader}
             className={styles.onion}
-            src="/next-pizza-delivery-app/onion"
+            src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/onion"
             alt="onion"
             height={260}
             width={260}

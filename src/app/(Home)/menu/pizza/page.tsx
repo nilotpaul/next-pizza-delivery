@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { prisma } from "@/lib/db/PrismaClient";
 import Image from "next/image";
-import loader from "../../../../../loader";
 import Link from "next/link";
 
 import styles from "./pizza.module.css";
@@ -20,7 +19,6 @@ const Pizza: FC = async () => {
             <div key={items.id} className={styles.items}>
               <Link href={`pizza/${items.id}`}>
                 <Image
-                  loader={loader}
                   className={styles.img}
                   src={items.image}
                   alt={items.name}

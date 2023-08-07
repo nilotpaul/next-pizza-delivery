@@ -1,8 +1,12 @@
 import { FC } from "react";
 
-import styles from "./dashboard.module.css";
 import { prisma } from "@/lib/db/PrismaClient";
 import SubmitButton from "./SubmitButton";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/(Auth)/api/auth/[...nextauth]/route";
+import { redirect } from "next/navigation";
+
+import styles from "./dashboard.module.css";
 
 async function addMenuItems(formData: FormData) {
   "use server";
@@ -25,7 +29,13 @@ async function addMenuItems(formData: FormData) {
   }
 }
 
-const Dashboard: FC = () => {
+const Dashboard: FC = async () => {
+  const session = await getServerSession(authOptions);
+
+  if (session?.user.email !== "nilotpaul.nandi007@gmail.com") {
+    redirect("/");
+  }
+
   return (
     <div className={styles.dashboard}>
       <form action={addMenuItems} className={styles.form}>

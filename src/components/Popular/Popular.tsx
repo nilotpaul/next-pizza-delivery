@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Image from "next/image";
-import loader from "../../../loader";
 import Link from "next/link";
 
 import { Pacifico } from "next/font/google";
@@ -24,8 +23,7 @@ const Popular: FC = () => {
           <Link href="/menu/pizza">
             <li className={styles.pizza}>
               <Image
-                loader={loader}
-                src="/next-pizza-delivery-app/pizza-cat.png"
+                src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/pizza-cat.png"
                 alt="Pizza"
                 height={90}
                 width={90}
@@ -36,8 +34,7 @@ const Popular: FC = () => {
           <Link href="#">
             <li className={styles.combo}>
               <Image
-                loader={loader}
-                src="/next-pizza-delivery-app/combo-cat.png"
+                src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/combo-cat.png"
                 alt="Combo"
                 height={100}
                 width={100}
@@ -48,8 +45,7 @@ const Popular: FC = () => {
           <Link href="#">
             <li className={styles.snacks}>
               <Image
-                loader={loader}
-                src="/next-pizza-delivery-app/snacks-cat.png"
+                src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/snacks-cat.png"
                 alt="Snacks"
                 height={100}
                 width={100}
@@ -60,8 +56,7 @@ const Popular: FC = () => {
           <Link href="#">
             <li className={styles.desserts}>
               <Image
-                loader={loader}
-                src="/next-pizza-delivery-app/dessert-cat.png"
+                src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/dessert-cat.png"
                 alt="Desserts"
                 height={100}
                 width={100}
@@ -72,8 +67,7 @@ const Popular: FC = () => {
           <Link href="#">
             <li className={styles.breverages}>
               <Image
-                loader={loader}
-                src="/next-pizza-delivery-app/breverage-cat.png"
+                src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/breverage-cat.png"
                 alt="Breverages"
                 height={80}
                 width={80}

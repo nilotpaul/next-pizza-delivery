@@ -8,8 +8,6 @@ import Link from "next/link";
 import { Pacifico } from "next/font/google";
 const Addtocart = dynamic(() => import("@/app/(Home)/Addtocart"));
 
-import loader from "../../../loader";
-
 import styles from "./styles/food.module.css";
 
 const pacifico = Pacifico({
@@ -47,7 +45,6 @@ const Food: FC = async () => {
             <div key={items.id} className={styles.items}>
               <Link href={`/menu/pizza/${items.id}`}>
                 <Image
-                  loader={loader}
                   className={styles.pizza__img}
                   src={items.image}
                   alt={items.name}
