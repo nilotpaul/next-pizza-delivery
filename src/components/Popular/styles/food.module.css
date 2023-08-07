@@ -47,12 +47,12 @@
   gap: 1.15rem;
 }
 
-.pizza .items:nth-child(4) > :link > img {
+.pizza .items:nth-child(4) > a > img {
   min-width: 255px;
   min-height: 255px;
 }
 
-.pizza .items:nth-child(5) > :link > img {
+.pizza .items:nth-child(5) > a > img {
   min-width: 255px;
   min-height: 255px;
 }
@@ -68,7 +68,7 @@
   padding: 0.45rem;
 }
 
-.pizza .items > :link > span {
+.pizza .items > a > span {
   font-weight: 500;
 }
 
@@ -89,7 +89,7 @@
   transition: background-color 0.3s;
 }
 
-.food > :link {
+.food > a {
   color: #000;
   margin-top: 2.5rem;
   letter-spacing: 1px;
@@ -101,4 +101,22 @@
   background: linear-gradient(20deg, #6b7280 20%, #9ca3af 40%, #334155 100%);
   padding: 0.45rem 1.35rem;
   font-weight: 600;
+}
+
+.items button {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.items a {
+  color: var(--yellow-color);
+}
+
+.items h3 {
+  font-size: calc(var(--h3-font-size) + 0.15rem);
+}
+
+.items span {
+  font-size: var(--h3-font-size);
 }

@@ -2,7 +2,7 @@
   "plugins": [],
   "extends": ["eslint:recommended", "next", "prettier"],
   "rules": {
-    "prefer-const": "error"
+    "prefer-const": "warn"
   },
   "overrides": [
     {

@@ -7,7 +7,7 @@ import FollowUs from "@/components/FollowUs/Followus";
 import styles from "./home.module.css";
 import Findus from "@/components/FindUs/Findus";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="main">
       <div className={styles.home}>

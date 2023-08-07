@@ -4,8 +4,15 @@ import { usePathname } from "next/navigation";
 import { FC, useEffect, useRef, useState } from "react";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
+import { Session } from "next-auth";
+import { Cart } from "@/Types/types";
 
-const Navigation: FC = () => {
+type NavigationProps = {
+  session: Session | null;
+  cart: Cart | null;
+};
+
+const Navigation: FC<NavigationProps> = ({ session, cart }) => {
   const [openNav, setOpenNav] = useState<boolean>(false);
   const [isDark, setIsDark] = useState<boolean>(false);
   const [openSideBar, setopenSideBar] = useState<boolean>(false);
@@ -36,9 +43,11 @@ const Navigation: FC = () => {
         pathname={pathname}
       />
       <Sidebar
+        session={session}
         pathname={pathname}
         openSideBar={openSideBar}
         setOpenSideBar={setopenSideBar}
+        cart={cart}
       />
     </>
   );

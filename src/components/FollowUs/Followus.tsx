@@ -1,7 +1,9 @@
 import { FC } from "react";
 
-import styles from "./styles/followus.module.css";
 import Image from "next/image";
+import loader from "../../../loader";
+
+import styles from "./styles/followus.module.css";
 
 const FollowUs: FC = () => {
   return (
@@ -14,6 +16,7 @@ const FollowUs: FC = () => {
         <ul className={styles.carousel__track}>
           <li className={styles.carousel__items}>
             <Image
+              loader={loader}
               src="/next-pizza-delivery-app/c4_wrdw3k"
               alt="story 1"
               fill
@@ -21,6 +24,7 @@ const FollowUs: FC = () => {
           </li>
           <li className={styles.carousel__items}>
             <Image
+              loader={loader}
               src="/next-pizza-delivery-app/c2_jhlbvz"
               alt="Story 2"
               fill
@@ -32,6 +36,7 @@ const FollowUs: FC = () => {
           </li>
           <li className={styles.carousel__items}>
             <Image
+              loader={loader}
               src="/next-pizza-delivery-app/c3_y1erpl"
               alt="Story 3"
               fill
@@ -39,6 +44,7 @@ const FollowUs: FC = () => {
           </li>
           <li className={styles.carousel__items}>
             <Image
+              loader={loader}
               src="/next-pizza-delivery-app/c5_hacrjq"
               alt="Story 4"
               fill
@@ -46,6 +52,7 @@ const FollowUs: FC = () => {
           </li>
           <li className={styles.carousel__items}>
             <Image
+              loader={loader}
               src="/next-pizza-delivery-app/c1_fcqqix"
               alt="Story 5"
               fill
@@ -53,6 +60,7 @@ const FollowUs: FC = () => {
           </li>
           <li className={styles.carousel__items}>
             <Image
+              loader={loader}
               src="/next-pizza-delivery-app/c4_wrdw3k"
               alt="story 1"
               fill
@@ -60,6 +68,7 @@ const FollowUs: FC = () => {
           </li>
           <li className={styles.carousel__items}>
             <Image
+              loader={loader}
               src="/next-pizza-delivery-app/c2_jhlbvz"
               alt="Story 2"
               fill
@@ -71,6 +80,7 @@ const FollowUs: FC = () => {
           </li>
           <li className={styles.carousel__items}>
             <Image
+              loader={loader}
               src="/next-pizza-delivery-app/c3_y1erpl"
               alt="Story 3"
               fill
@@ -79,6 +89,7 @@ const FollowUs: FC = () => {
 
           <li className={styles.carousel__items}>
             <Image
+              loader={loader}
               src="/next-pizza-delivery-app/c5_hacrjq"
               alt="Story 4"
               fill
@@ -86,6 +97,7 @@ const FollowUs: FC = () => {
           </li>
           <li className={styles.carousel__items}>
             <Image
+              loader={loader}
               src="/next-pizza-delivery-app/c1_fcqqix"
               alt="Story 5"
               fill

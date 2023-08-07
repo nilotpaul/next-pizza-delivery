@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import Image from "next/image";
+import loader from "../../../loader";
 
 import { MdOutlineDeliveryDining } from "react-icons/md";
 import { FaThumbsUp } from "react-icons/fa6";
@@ -13,7 +14,12 @@ const WhyUs: FC = () => {
       <h1>Why Us?</h1>
       <div className={styles.whyus__container}>
         <div className={styles.left}>
-          <Image src="/next-pizza-delivery-app/whyus2" alt="Why Us?" fill />
+          <Image
+            loader={loader}
+            src="/next-pizza-delivery-app/whyus2"
+            alt="Why Us?"
+            fill
+          />
         </div>
         <div className={styles.right}>
           <ul>

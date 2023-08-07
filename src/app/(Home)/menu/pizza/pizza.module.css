@@ -1,0 +1,51 @@
+.pizza {
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 315px);
+  place-items: center;
+  place-content: space-around;
+  row-gap: 2.25rem;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.75rem;
+}
+
+.menu h3 {
+  font-size: var(--h3-font-size);
+}
+
+.menu span {
+  font-size: calc(var(--normal-font-size) + 0.15rem);
+  color: var(--yellow-color);
+}
+
+.pizza button {
+  padding: 0.3em 0.85em;
+  font-weight: 500;
+  font-size: calc(var(--normal-font-size) + 0.035rem);
+  outline: none;
+  border: 0;
+  background-color: var(--red-color);
+  border-radius: 0.15rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pizza button:hover {
+  background-color: #c74a41;
+  transition: background-color 0.3s;
+}
+
+.menu button {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}

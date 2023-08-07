@@ -17,10 +17,11 @@
   object-position: center;
 }
 
-.popular li {
+.popular a li {
   background-color: #1e293b;
   width: auto;
   padding: 1.8rem 2.35rem;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,14 +30,15 @@
   gap: 1.5rem;
   border-radius: 0.2rem;
   cursor: pointer;
+  color: #fff;
 }
 
-.popular li > img {
+.popular a li > img {
   scale: 1;
   transition: scale 0.4s;
 }
 
-.popular li:hover > img {
+.popular a li:hover > img {
   scale: 1.2;
   transition: scale 0.4s;
 }

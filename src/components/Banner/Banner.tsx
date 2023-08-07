@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import Image from "next/image";
+import loader from "../../../loader";
 import Link from "next/link";
 
 import styles from "./styles/banner.module.css";
@@ -27,7 +28,7 @@ const Banner: FC = () => {
           traditional recipes.
         </p>
         <div className={styles.down}>
-          <Link href="#">Go To Menu</Link>
+          <Link href="/menu">Go To Menu</Link>
           <span id={styles.price_1}>
             $ 17,99 <span id={styles.price_2}>$ 23,00</span>
           </span>
@@ -36,6 +37,7 @@ const Banner: FC = () => {
       <div className={styles.right}>
         <div className={styles.img_container}>
           <Image
+            loader={loader}
             className={styles.banner_img}
             src="/next-pizza-delivery-app/banner.png"
             alt="banner-img"
@@ -44,6 +46,7 @@ const Banner: FC = () => {
             priority
           />
           <Image
+            loader={loader}
             className={styles.jalapeno}
             src="/next-pizza-delivery-app/jalapeno"
             alt="jalapeno"
@@ -52,6 +55,7 @@ const Banner: FC = () => {
             quality={100}
           />
           <Image
+            loader={loader}
             className={styles.rasher}
             src="/next-pizza-delivery-app/grilled-chicken-rasher"
             alt="grillied-chicken-rasher"
@@ -60,6 +64,7 @@ const Banner: FC = () => {
             quality={100}
           />
           <Image
+            loader={loader}
             className={styles.onion}
             src="/next-pizza-delivery-app/onion"
             alt="onion"

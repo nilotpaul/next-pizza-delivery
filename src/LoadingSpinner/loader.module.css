@@ -1,0 +1,35 @@
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: fit-content;
+  min-width: fit-content;
+  position: absolute;
+  right: -32px;
+}
+
+.loader:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-color);
+  border-top-color: #ccc;
+  animation: loader 0.7s linear infinite;
+  transition: visibility 0.4s, opacity 0.4s;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.loader__hidden {
+  visibility: collapse;
+  opacity: 0;
+  transition: visibility 0.4s, opacity 0.4s;
+}

@@ -1,14 +1,8 @@
-import { FC } from "react";
+"use client";
 
-// https://res.cloudinary.com/dtxry2kma/image/upload/v1690443744/next-pizza-delivery-app/banner.png
+import { ImageLoaderProps } from "next/image";
 
-type loaderProps = {
-  src: string;
-  width: number;
-  quality: number;
-};
-
-const loader: FC<loaderProps> = ({ src, width, quality }) => {
+export const loader = ({ src, width, quality }: ImageLoaderProps) => {
   const params = ["f_auto", "c_limit", `w_${width}`, `q_${quality || "auto"}`];
   return `${process.env.CLOUDINARY_URL_STRING}/${params.join(",")}${src}`;
 };

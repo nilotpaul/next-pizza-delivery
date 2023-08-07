@@ -1,0 +1,22 @@
+.head {
+  margin-top: 4rem;
+  background-color: var(--red-color);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.35rem;
+  padding: 2.3rem 1.65rem;
+  border-radius: 0 0 0.2rem 0.2rem;
+}
+
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.2rem;
+  color: #e3e3e3;
+}
+
+.breadcrumb i {
+  color: #fff;
+}

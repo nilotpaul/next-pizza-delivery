@@ -1,10 +1,10 @@
 import Link from "next/link";
+import { FC } from "react";
 
 import { HiOutlineMenuAlt2, HiSun, HiMoon } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 
 import styles from "../Navigation/styles/navbar.module.css";
-import { FC } from "react";
 
 type ChildProps = {
   closeRef: React.RefObject<HTMLSpanElement>;
@@ -53,18 +53,18 @@ const Navbar: FC<ChildProps> = ({
             </li>
             <li onClick={() => setOpenNav(false)} className={styles.nav__items}>
               <Link
-                id={pathname === "/about" ? `${styles.active_link}` : ""}
-                href="/about"
-              >
-                About Us
-              </Link>
-            </li>
-            <li onClick={() => setOpenNav(false)} className={styles.nav__items}>
-              <Link
                 id={pathname === "/menu" ? `${styles.active_link}` : ""}
                 href="/menu"
               >
                 Menu
+              </Link>
+            </li>
+            <li onClick={() => setOpenNav(false)} className={styles.nav__items}>
+              <Link
+                id={pathname === "/about" ? `${styles.active_link}` : ""}
+                href="/about"
+              >
+                About Me
               </Link>
             </li>
             <li onClick={() => setOpenNav(false)} className={styles.nav__items}>
