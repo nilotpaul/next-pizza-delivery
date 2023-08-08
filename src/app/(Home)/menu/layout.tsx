@@ -3,7 +3,7 @@ import Breadcrumbs2 from "./Breadcrumbs2";
 
 import styles from "./layout.module.css";
 
-export default function AboutLayout({
+export default function MenuLayout({
   children,
 }: {
   children: React.ReactNode;

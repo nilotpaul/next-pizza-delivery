@@ -1,10 +1,15 @@
 import { FC } from "react";
 
+import { Metadata } from "next";
 import Image from "next/image";
 import { prisma } from "@/lib/db/PrismaClient";
 import Link from "next/link";
 
 import styles from "./menu.module.css";
+
+export const metadata: Metadata = {
+  title: "Menu",
+};
 
 const Menu: FC = async () => {
   const data = await prisma.menuItems.findMany({

@@ -5,8 +5,13 @@ import SubmitButton from "./SubmitButton";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/(Auth)/api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
+import { Metadata } from "next";
 
 import styles from "./dashboard.module.css";
+
+export const metadata: Metadata = {
+  title: "Dashboard",
+};
 
 async function addMenuItems(formData: FormData) {
   "use server";

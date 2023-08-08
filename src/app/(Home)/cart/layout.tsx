@@ -24,7 +24,7 @@ export default async function CartLayout({
         }
       >
         <span>
-          Subtotal <span>$ {cart?.subtotal}</span>
+          Subtotal <span>$ {cart?.subtotal?.toFixed(2)}</span>
         </span>
         <Link href="/checkout">Checkout ({cart?.qty})</Link>
         <ClearAll />

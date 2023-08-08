@@ -16,7 +16,7 @@ const pacifico = Pacifico({
   weight: ["400"],
 });
 
-async function getData(): Promise<menuItems[]> {
+export async function getData(): Promise<menuItems[]> {
   try {
     const res = await prisma.menuItems.findMany({
       orderBy: {

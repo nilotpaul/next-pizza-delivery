@@ -1,17 +1,41 @@
-import { FC } from "react";
+import { FC, cache } from "react";
 import { menuItems } from "@prisma/client";
 import { prisma } from "@/lib/db/PrismaClient";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Image from "next/image";
 import Buynow from "./Buynow";
+import { Metadata } from "next";
 
 import styles from "./item.module.css";
 
-export const dynamicParams = false;
+export async function generateMetadata({
+  params: { item },
+}: {
+  params: { item: string };
+}): Promise<Metadata> {
+  const data = await getItem(item);
+
+  if (!item) {
+    return {
+      title: "Not Found",
+      description: "page not found",
+    };
+  }
+
+  return {
+    title: data!.name,
+    description: `${data!.name} description`,
+    openGraph: {
+      images: [{ url: data.image }],
+    },
+  };
+}
 
 type ItemProps = {
   params: { item: string };
 };
+
+export const dynamicParams = false;
 
 export async function generateStaticParams(): Promise<Params[]> {
   const items = await prisma.menuItems.findMany({
@@ -23,10 +47,10 @@ export async function generateStaticParams(): Promise<Params[]> {
   }));
 }
 
-async function getItem(item: string): Promise<menuItems> {
+const getItem = cache(async (item: string): Promise<menuItems> => {
   try {
     const data = await prisma.menuItems.findUniqueOrThrow({
-      where: { id: item.toString().toLocaleLowerCase() },
+      where: { id: item.toString().toLowerCase() },
     });
 
     return data;
@@ -34,7 +58,7 @@ async function getItem(item: string): Promise<menuItems> {
     console.log(err);
     throw new Error("couldn't get the [item]");
   }
-}
+});
 
 const Item: FC<ItemProps> = async ({ params: { item } }) => {
   const { id, name, price, image } = await getItem(item);

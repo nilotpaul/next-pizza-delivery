@@ -29,6 +29,11 @@ export const authOptions: NextAuthOptions = {
       await mergeCart(user.id);
     },
   },
+
+  pages: {
+    signIn: "/signin",
+    signOut: "/signout",
+  },
 };
 
 const handler = NextAuth(authOptions);

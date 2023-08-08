@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { FC } from "react";
 import Image from "next/image";
-import { useSession } from "next-auth/react";
+import { Session } from "next-auth";
+import { Cart } from "@/Types/types";
 
 import { HiOutlineMenuAlt2, HiSun, HiMoon } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
@@ -16,6 +17,8 @@ type ChildProps = {
   setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
   menuRef: React.RefObject<HTMLDivElement>;
   pathname: string;
+  session: Session | null;
+  cart: Cart | null;
 };
 
 const Navbar: FC<ChildProps> = ({
@@ -26,9 +29,9 @@ const Navbar: FC<ChildProps> = ({
   setIsDark,
   menuRef,
   pathname,
+  session,
+  cart,
 }) => {
-  const { data } = useSession();
-
   return (
     <nav className={styles.header}>
       <div className={`container ${styles.navbar}`}>
@@ -79,10 +82,46 @@ const Navbar: FC<ChildProps> = ({
                 Contact
               </Link>
             </li>
-            <li onClick={() => setOpenNav(false)} className={styles.btn_li}>
-              <Link className={styles.btn} href="/">
-                Order Now
+            <li onClick={() => setOpenNav(false)} className={styles.nav__items}>
+              {session ? (
+                <span style={{ color: "var(--red-color)", fontWeight: "600" }}>
+                  ( {cart?.qty || 0} )
+                </span>
+              ) : null}
+              <Link
+                style={
+                  pathname === "/cart"
+                    ? { color: "var(--yellow-color)" }
+                    : undefined
+                }
+                href="/cart"
+              >
+                Cart
+                <i
+                  className="ri-shopping-bag-2-line"
+                  style={{ fontSize: "26px" }}
+                />
               </Link>
+            </li>
+            <li
+              className={styles.nav__items}
+              onClick={() => setIsDark(!isDark)}
+            >
+              {!isDark ? <span>Light</span> : <span>Dark</span>}
+              <span
+                style={
+                  isDark
+                    ? { backgroundColor: "#868686", color: "#fcdf2b" }
+                    : { backgroundColor: "#313131", color: "#fff" }
+                }
+                className={styles.mode}
+              >
+                {isDark ? (
+                  <HiSun size={22} id={styles.sun} />
+                ) : (
+                  <HiMoon size={22} id={styles.moon} />
+                )}
+              </span>
             </li>
           </ul>
         </div>
@@ -98,7 +137,8 @@ const Navbar: FC<ChildProps> = ({
               <HiOutlineMenuAlt2 size={23} id={styles.menu} />
             )}
           </span>
-          <Link href="/cart">
+          <Link className={styles.cart} href="/cart">
+            <span>{cart?.qty || 0}</span>
             <i
               className="ri-shopping-bag-2-line"
               style={
@@ -108,18 +148,18 @@ const Navbar: FC<ChildProps> = ({
               }
             />
           </Link>
-          {data ? (
-            <Link href="/api/auth/signout">
+          {session ? (
+            <Link href="/signout">
               <Image
-                src={data?.user.image as string}
-                alt={data?.user.name as string}
+                src={session.user.image as string}
+                alt={session.user.image as string}
                 height={32}
                 width={32}
                 priority
               />
             </Link>
           ) : (
-            <Link href="/api/auth/signin">
+            <Link href="/signin">
               <i
                 className="ri-login-circle-line"
                 style={{ fontSize: "26px" }}

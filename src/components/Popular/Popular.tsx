@@ -1,6 +1,8 @@
 import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/(Auth)/api/auth/[...nextauth]/route";
 
 import { Pacifico } from "next/font/google";
 
@@ -12,11 +14,14 @@ const pacifico = Pacifico({
   weight: ["400"],
 });
 
-const Popular: FC = () => {
+const Popular: FC = async () => {
+  const session = await getServerSession(authOptions);
+
   return (
     <div className={styles.popular}>
       <span className={pacifico.className} id={styles.specials}>
-        What are you craving for?
+        {session?.user?.name?.split(" ")[0] || null} {session ? "what" : "What"}{" "}
+        are you craving for?
       </span>
       <div className={styles.categories}>
         <ul className={styles.category}>

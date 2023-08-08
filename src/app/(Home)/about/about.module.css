@@ -35,13 +35,12 @@
 }
 
 .repo {
-  display: inline-flex;
-  align-items: flex-start;
-  column-gap: 0.5rem;
+  display: inline;
 }
 
 .repo a {
   color: var(--yellow-color);
+  margin-left: 0.3rem;
 }
 
 .repo a:hover {

@@ -1,7 +1,13 @@
 import { FC } from "react";
+import Link from "next/link";
+import { Metadata } from "next";
 
 import styles from "./about.module.css";
-import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "This page showcases briefly about this PizzaRio",
+};
 
 const About: FC = () => {
   return (

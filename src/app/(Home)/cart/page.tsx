@@ -2,11 +2,19 @@ import { FC } from "react";
 import Link from "next/link";
 import { getCart } from "@/lib/db/Cart";
 import Image from "next/image";
-import loader from "../../../../loader";
 import SelectQty from "./SelectQty";
 import Remove from "./Remove";
+import { Metadata } from "next";
 
 import styles from "./cart.module.css";
+
+export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Cart",
+  description:
+    "Review and Customize Your Order - Explore your selected pizza items in your cart. Customize toppings, sizes, and quantities before placing your delicious pizza order with us.",
+};
 
 const CartPage: FC = async () => {
   const cart = await getCart();
@@ -39,7 +47,6 @@ const CartPage: FC = async () => {
                         alt={items.Item.name}
                         height={160}
                         width={160}
-                        loader={loader}
                         priority
                       />
                     </Link>

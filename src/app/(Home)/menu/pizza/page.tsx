@@ -2,9 +2,14 @@ import { FC } from "react";
 import { prisma } from "@/lib/db/PrismaClient";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+import Addtocart from "../../Addtocart";
 
 import styles from "./pizza.module.css";
-import Addtocart from "../../Addtocart";
+
+export const metadata: Metadata = {
+  title: "Pizza",
+};
 
 const Pizza: FC = async () => {
   const data = await prisma.menuItems.findMany({
