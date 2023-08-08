@@ -25,4 +25,5 @@ export async function add(id: string) {
   }
 
   revalidatePath("/");
+  revalidatePath("/cart");
 }

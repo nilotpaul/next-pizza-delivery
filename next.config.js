@@ -7,7 +7,6 @@ const nextConfig = {
     loader: "default",
     domains: ["lh3.googleusercontent.com", "res.cloudinary.com"],
     disableStaticImages: true,
-    minimumCacheTTL: 1,
     formats: ["image/webp"],
   },
 };

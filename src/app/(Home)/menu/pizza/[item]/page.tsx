@@ -13,22 +13,22 @@ export async function generateMetadata({
 }: {
   params: { item: string };
 }): Promise<Metadata> {
-  const data = await getItem(item);
+  const data = prisma.menuItems.findUniqueOrThrow({
+    where: { id: item },
+  });
 
   if (!item) {
     return {
       title: "Not Found",
       description: "page not found",
     };
+  } else {
+    return {
+      openGraph: {
+        images: [{ url: (await data).image, alt: (await data).name }],
+      },
+    };
   }
-
-  return {
-    title: data!.name,
-    description: `${data!.name} description`,
-    openGraph: {
-      images: [{ url: data.image }],
-    },
-  };
 }
 
 type ItemProps = {

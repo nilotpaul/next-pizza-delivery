@@ -83,11 +83,9 @@ const Navbar: FC<ChildProps> = ({
               </Link>
             </li>
             <li onClick={() => setOpenNav(false)} className={styles.nav__items}>
-              {session ? (
-                <span style={{ color: "var(--red-color)", fontWeight: "600" }}>
-                  ( {cart?.qty || 0} )
-                </span>
-              ) : null}
+              <span style={{ color: "var(--red-color)", fontWeight: "600" }}>
+                ( {cart?.qty || 0} )
+              </span>
               <Link
                 style={
                   pathname === "/cart"

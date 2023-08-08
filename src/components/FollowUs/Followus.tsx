@@ -18,6 +18,7 @@ const FollowUs: FC = () => {
               src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/c4_wrdw3k"
               alt="story 1"
               fill
+              sizes="100vw"
             />
           </li>
           <li className={styles.carousel__items}>
@@ -25,6 +26,7 @@ const FollowUs: FC = () => {
               src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/c2_jhlbvz"
               alt="Story 2"
               fill
+              sizes="100vw"
               style={{
                 objectFit: "cover",
                 objectPosition: "bottom",
@@ -36,6 +38,7 @@ const FollowUs: FC = () => {
               src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/c3_y1erpl"
               alt="Story 3"
               fill
+              sizes="100vw"
             />
           </li>
           <li className={styles.carousel__items}>
@@ -43,6 +46,7 @@ const FollowUs: FC = () => {
               src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/c5_hacrjq"
               alt="Story 4"
               fill
+              sizes="100vw"
             />
           </li>
           <li className={styles.carousel__items}>
@@ -50,6 +54,7 @@ const FollowUs: FC = () => {
               src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/c1_fcqqix"
               alt="Story 5"
               fill
+              sizes="100vw"
             />
           </li>
           <li className={styles.carousel__items}>
@@ -57,6 +62,7 @@ const FollowUs: FC = () => {
               src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/c4_wrdw3k"
               alt="story 1"
               fill
+              sizes="100vw"
             />
           </li>
           <li className={styles.carousel__items}>
@@ -64,6 +70,7 @@ const FollowUs: FC = () => {
               src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/c2_jhlbvz"
               alt="Story 2"
               fill
+              sizes="100vw"
               style={{
                 objectFit: "cover",
                 objectPosition: "bottom",
@@ -75,6 +82,7 @@ const FollowUs: FC = () => {
               src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/c3_y1erpl"
               alt="Story 3"
               fill
+              sizes="100vw"
             />
           </li>
 
@@ -83,6 +91,7 @@ const FollowUs: FC = () => {
               src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/c5_hacrjq"
               alt="Story 4"
               fill
+              sizes="100vw"
             />
           </li>
           <li className={styles.carousel__items}>
@@ -90,6 +99,7 @@ const FollowUs: FC = () => {
               src="https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/c1_fcqqix"
               alt="Story 5"
               fill
+              sizes="100vw"
             />
           </li>
         </ul>

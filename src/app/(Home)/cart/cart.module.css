@@ -1,5 +1,5 @@
 .cart {
-  margin: 6rem 0;
+  padding: 6rem 0;
 }
 
 .container {
@@ -135,6 +135,10 @@
   .cart {
     padding-top: initial;
   }
+
+  .cart .empty {
+    margin-top: 6rem;
+  }
 }
 
 /* for small devices */
@@ -142,7 +146,6 @@
   .categories {
     display: none;
   }
-
   .li_1 {
     display: flex;
     flex-direction: column;

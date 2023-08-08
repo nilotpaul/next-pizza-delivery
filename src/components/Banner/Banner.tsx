@@ -11,7 +11,7 @@ const kaushan = Kaushan_Script({
   weight: ["400"],
 });
 
-const Banner: FC = () => {
+const Banner: FC = async () => {
   return (
     <section className={styles.banner}>
       <div className={styles.left}>
@@ -50,6 +50,7 @@ const Banner: FC = () => {
             height={260}
             width={260}
             quality={100}
+            priority
           />
           <Image
             className={styles.rasher}
@@ -58,6 +59,7 @@ const Banner: FC = () => {
             height={260}
             width={260}
             quality={100}
+            priority
           />
           <Image
             className={styles.onion}
@@ -66,6 +68,7 @@ const Banner: FC = () => {
             height={260}
             width={260}
             quality={100}
+            priority
           />
         </div>
       </div>
