@@ -24,6 +24,7 @@ export async function generateMetadata({
     };
   } else {
     return {
+      metadataBase: new URL("https://next-pizza-delivery.vercel.app"),
       openGraph: {
         images: [{ url: (await data).image, alt: (await data).name }],
       },
