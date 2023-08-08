@@ -1,7 +1,6 @@
 import { FC } from "react";
 
 import Image from "next/image";
-import getBase64 from "@/lib/blurdataurl/Base64";
 
 import { MdOutlineDeliveryDining } from "react-icons/md";
 import { FaThumbsUp } from "react-icons/fa6";
@@ -9,9 +8,6 @@ import { FaThumbsUp } from "react-icons/fa6";
 import styles from "./styles/whyus.module.css";
 
 const WhyUs: FC = async () => {
-  const blurDataUrl = await getBase64(
-    "https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/whyus2"
-  );
   return (
     <div className={styles.whyus}>
       <h1>Why Us?</h1>
@@ -22,8 +18,6 @@ const WhyUs: FC = async () => {
             alt="Why Us?"
             fill
             sizes="100vw"
-            blurDataURL={blurDataUrl}
-            placeholder="blur"
           />
         </div>
         <div className={styles.right}>

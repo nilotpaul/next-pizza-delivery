@@ -4,7 +4,6 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { prisma } from "@/lib/db/PrismaClient";
 import Link from "next/link";
-import getBase64 from "@/lib/blurdataurl/Base64";
 
 import styles from "./menu.module.css";
 
@@ -17,10 +16,6 @@ const Menu: FC = async () => {
     orderBy: { name: "asc" },
   });
 
-  const blurDataUrl = await getBase64(
-    "https://res.cloudinary.com/dtxry2kma/image/upload/v1690642886/next-pizza-delivery-app/pizza6_coany1.jpg"
-  );
-
   return (
     <div className={styles.menu}>
       <div className={styles.pizza}>
@@ -31,8 +26,6 @@ const Menu: FC = async () => {
             height={480}
             width={480}
             priority
-            blurDataURL={blurDataUrl}
-            placeholder="blur"
           />
           <Link href="/menu/pizza">Order Now</Link>
         </div>
