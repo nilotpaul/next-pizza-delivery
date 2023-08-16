@@ -25,7 +25,7 @@ Welcome to the PizzaRio! This app is built using Prisma and Next.js.
 ## Installation
 Set up environment variables in a .env.local file.
 ```
-git clone https://github.com/yourusername/pizza-delivery-app.git
+git clone https://github.com/nilotpaul/next-pizza-delivery.git
 npm install
 npm run dev
 ```
